@@ -14,7 +14,7 @@ for numero in numeri_non_analizzati:
         print(f"numero dispari verificato: {numero}")
 
 
-print(f"I numeri pari torvati sono: {numeri_pari}")
+print(f"I numeri pari trovati sono: {numeri_pari}")
         
 
 
