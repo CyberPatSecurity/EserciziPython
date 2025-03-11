@@ -1,4 +1,4 @@
-#Creare una tupla di numeri interi e ordinare i numeri in ordine decrescente.
+#Creare una tupla di numeri interi e ordinare i numeri in ordine inverso.
 
 input_utente = input("Inserire una serie di numeri interi a piacere :   ")
 
