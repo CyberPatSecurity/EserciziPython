@@ -1,0 +1,4 @@
+Con Python si possono creare web application
+Con Python si possono creare dei modelli LLM come chatgpt
+Con Python si può imparare la programmazione in modo più lineare
+Con Python possiamo creare dei giochi 
