@@ -16,14 +16,19 @@ class PortaElettrica:
         return current_time.time().strftime('%H:%M')
     
     def blocca(self):
-        current_time = datetime.now()
+        current_time = datetime.now().time()
+    
         start_m = datetime.time(13, 30, 0)
         end_m = datetime.time(14, 30, 0)
-        start_n = datetime.time(18, 00, 0)
+    
+        start_n = datetime.time(18, 0, 0)
         end_n = datetime.time(8, 30, 0)
-        
-        if start_n < current_time > end_n and start_m > current_time < end_m :
-            self.bloccata = True
+    
+        if start_m <= current_time <= end_m or current_time >= start_n or current_time <= end_n:
+        self.bloccata = True
+        else:
+        self.bloccata = False
+
                 
 
     def apri(self):
