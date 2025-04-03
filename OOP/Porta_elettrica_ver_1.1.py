@@ -32,10 +32,12 @@ class PortaElettrica:
                 
 
     def apri(self):
-        """Funzione per aprire la porta e ottenere le variazioni del suo stato"""
+        """Prova ad aprire la porta: verifica blocco automatico basato sull'orario"""
+        self.blocca() # aggiorna il valore di self.bloccata in base all'orario corrente
+        
         if self.bloccata == True :
             self.stato = "CHIUSA"
-            print(f"La porta nel segeunte orario non può essere aperta")
+            print(f"⛔ La porta è bloccata: fuori orario di apertura.")
         else:
             self.tentativi_apertura += 1
             self.stato = "Aperta"        
