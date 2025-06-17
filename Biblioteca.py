@@ -11,14 +11,19 @@ class Biblioteca:
         self.nomeBiblioteca = nomeBiblioteca
         self.libri = []
 
-    def libri_archiviati(self, libro):
-        self.libri.append(libro)
+    
+    def libri_archiviati(self):
         return self.libri
     
-    def ottieni_libri_genere(self):
-        generi = []
+    
+    def aggiungi_libro(self, libro):
+        self.libri.append(libro)
+        
+    
+    def ottieni_libri_genere(self, genere):
+        generi = []        
         for book in self.libri:
-            if book.genere == "Fantascienza":
+            if book.genere == genere:
                 generi.append(book)
         return generi
     
@@ -39,19 +44,22 @@ libro5 = Libro("Tutti i racconti", "Franz Kafka", 1920, "Grottesco")
 
 mia_biblioteca = Biblioteca("Biblioteca Nazionale")
 
-mia_biblioteca.libri_archiviati(libro1)
-mia_biblioteca.libri_archiviati(libro2)
-mia_biblioteca.libri_archiviati(libro3)
-mia_biblioteca.libri_archiviati(libro4)
-mia_biblioteca.libri_archiviati(libro5)
+mia_biblioteca.aggiungi_libro(libro1)
+mia_biblioteca.aggiungi_libro(libro2)
+mia_biblioteca.aggiungi_libro(libro3)
+mia_biblioteca.aggiungi_libro(libro4)
+mia_biblioteca.aggiungi_libro(libro5)
+
+mia_biblioteca.ottieni_libri_genere("Horror")
+
 
 
 for book in mia_biblioteca.libri:
     print(f"Libro -> Titolo - {book.titolo}, Autore - {book.autore}, Anno di pubblicazione - {book.anno}, Genere - {book.genere}\n")
 
-genere_libro = mia_biblioteca.ottieni_libri_genere()
+genere_libro = mia_biblioteca.ottieni_libri_genere("Horror")
 for book in genere_libro:
-    print(f"Lista dei Libri di Fantascienza : {book.titolo}")
+    print(f"Lista dei Libri di {book.genere} : {book.titolo}")
 
 anno = mia_biblioteca.ottieni_libri_usciti_prima_di()
 for book in anno:
