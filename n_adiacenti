@@ -3,11 +3,11 @@ elementi_in_lista = len(lista_numeri)
 
 nuova_lista_numeri = []
 i = 0
-for numeri in lista_numeri:
-    if i == elementi_in_lista:
-        
+for numeri in lista_numeri:    
     numeri_adiacenti = lista_numeri[i-1] + lista_numeri[i+1]
     nuova_lista_numeri.append(numeri_adiacenti)
+    if i == elementi_in_lista - 1:
+        
     i += 1
     
 print(elementi_in_lista)
