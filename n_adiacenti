@@ -1,0 +1,13 @@
+lista_numeri = [1, 2, 3]
+elementi_in_lista = len(lista_numeri)
+
+nuova_lista_numeri = []
+i = 0
+for numeri in lista_numeri:
+    if i == elementi_in_lista:
+        
+    numeri_adiacenti = lista_numeri[i-1] + lista_numeri[i+1]
+    nuova_lista_numeri.append(numeri_adiacenti)
+    i += 1
+    
+print(elementi_in_lista)
