@@ -2,12 +2,19 @@ lista_numeri = [1, 2, 3]
 elementi_in_lista = len(lista_numeri)
 
 nuova_lista_numeri = []
+
 i = 0
-for numeri in lista_numeri:    
-    numeri_adiacenti = lista_numeri[i-1] + lista_numeri[i+1]
-    nuova_lista_numeri.append(numeri_adiacenti)
-    if i == elementi_in_lista - 1:
+
+if lista_numeri = []:
+    return nuova_lista_numeri
+else:
+    for numeri in lista_numeri:        
+        numeri_adiacenti = lista_numeri[i-1] + lista_numeri[i+1]
+        nuova_lista_numeri.append(numeri_adiacenti)          
+        i += 1
+        if i == elementi_in_lista - 1:
+            ultimo_numero = 
         
-    i += 1
+        
     
 print(elementi_in_lista)
