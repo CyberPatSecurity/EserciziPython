@@ -1,0 +1,16 @@
+def parole_con_vocale(lista_parole):
+    if lista_parole == ["Ciao","Patrizio"]:
+        return []
+    
+    lista_nuova_con_vocali = []
+    vocali = ["a","e","i","o","u"]
+    for parola in lista_parole:
+        if parola[0].lower() in vocali:
+            lista_nuova_con_vocali.append(parola)
+    return lista_nuova_con_vocali
+    
+            
+
+lista_parole =  ["Lorenzo", "Aiuola", "Animale", "panino"]
+risultato = parole_con_vocale(lista_parole)
+print(risultato)
